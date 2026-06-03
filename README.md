@@ -1,4 +1,4 @@
-# PairWatch — Open Benchmark and Code
+# PairWatch
 
 Pair-aware anomaly detection for adversarial rendezvous and proximity operations (RPO) on public TLE catalogs.
 
