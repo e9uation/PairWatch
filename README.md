@@ -1,5 +1,7 @@
 # PairWatch
 
+Pair-aware anomaly detection for adversarial rendezvous and proximity operations (RPO) on public TLE catalogs.
+
 This repository accompanies the CIKM 2026 short paper *"PairWatch: Pair-Aware Anomaly Transformer for Detecting Adversarial Rendezvous in Public Satellite Catalogs"*.
 
 It contains the open benchmark of 359 pair-windows, the PairWatch implementation, four reproduction scripts, and the data collection pipeline.
@@ -7,7 +9,7 @@ It contains the open benchmark of 359 pair-windows, the PairWatch implementation
 ## Repository Structure
 
 ```
-PairWatch-benchmark/
+PairWatch/
 ├── benchmark/                   Open RPO benchmark (processed features)
 │   ├── windows_meta.parquet     Window metadata (target/neighbor IDs, timestamps, label, source, split)
 │   ├── windows_feat.parquet     Pair feature vectors at hourly resolution over a 14-day window (range, range rate, relative speed, plane-alignment angle)
@@ -25,7 +27,7 @@ PairWatch-benchmark/
 │   └── fetch_tle.py             For users who want to rebuild from scratch
 ├── requirements.txt
 ├── LICENSE                      MIT (code)
-└── README.md                    
+└── README.md
 ```
 
 ## Run & Reproduce
@@ -124,7 +126,7 @@ Our processed benchmark contains only derived kinematic features and anonymized 
 ## Citation
 
 ```
-[ANONYMOUS for double-blind review. Will bee added upon acceptance.]
+[ANONYMOUS for double-blind review. Will be added upon acceptance.]
 ```
 
 ## License
