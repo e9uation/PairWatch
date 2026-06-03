@@ -1,7 +1,5 @@
 # PairWatch
 
-Pair-aware anomaly detection for adversarial rendezvous and proximity operations (RPO) on public TLE catalogs.
-
 This repository accompanies the CIKM 2026 short paper *"PairWatch: Pair-Aware Anomaly Transformer for Detecting Adversarial Rendezvous in Public Satellite Catalogs"*.
 
 It contains the open benchmark of 359 pair-windows, the PairWatch implementation, four reproduction scripts, and the data collection pipeline.
