@@ -24,8 +24,7 @@ Under the following terms:
 
 What this benchmark contains
 ----------------------------
-This release contains DERIVED features computed from public Two-Line
-Element (TLE) data:
+This release contains DERIVED features computed from public Two-Line Element (TLE) data:
   * Pair feature vectors (range, range rate, relative speed, plane-alignment angle) 
     computed via SGP4 propagation.
   * Window metadata (NORAD IDs, timestamps, labels, source category).
