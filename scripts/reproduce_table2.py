@@ -18,8 +18,12 @@ def main() -> None:
     from pairwatch.eval.per_source_breakdown import main as ps_main
     ps_main()
 
+    print("\nSame decomposition over the non-neural detectors...")
+    from pairwatch.eval.physics_per_source import main as pps_main
+    pps_main()
+
     print("\n" + "=" * 70)
-    print(" Output: runs/per_source.json")
+    print(" Outputs: runs/per_source.json, runs/physics_per_source.json")
     print("=" * 70)
 
 
