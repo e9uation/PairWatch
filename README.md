@@ -55,6 +55,8 @@ python scripts/reproduce_table3.py
 python scripts/reproduce_table4.py
 ```
 
+> **Note — the Isolation Forest row (Table 1, first row).** This one baseline reads raw TLE from data/raw_tle/, which we cannot redistribute under Space-Track's terms of service. Without it, every window falls back to a zero feature vector and the row reports a degenerate AUROC of **0.500** in place of the published 0.600 / 0.228 / 0.175. This is a packaging limitation, not a discrepancy in the reported results: the row reproduces exactly once raw TLE is present (see [Rebuilding the benchmark from raw TLE](#rebuilding-the-benchmark-from-raw-tle-optional)). Every other row of Table 1 and all of Tables 2–4 reproduce from the bundled benchmark alone, with no Space-Track account required.
+
 All outputs, logs, and generated tables will be saved in `runs/` directory.
 
 ## Benchmark contents
