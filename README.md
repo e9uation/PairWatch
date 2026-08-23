@@ -4,7 +4,7 @@ Pair-aware anomaly detection for adversarial rendezvous and proximity operations
 
 This repository accompanies the CIKM 2026 short paper *"PairWatch: Pair-Aware Anomaly Transformer for Detecting Adversarial Rendezvous in Public Satellite Catalogs"*.
 
-It contains the open benchmark of 359 pair-windows, the PairWatch implementation, four reproduction scripts, and the data collection pipeline.
+It contains the open benchmark of 359 pair-windows, the PairWatch implementation, all nine baseline detectors, four reproduction scripts, and the data collection pipeline.
 
 ## Repository Structure
 
@@ -29,6 +29,24 @@ PairWatch/
 ├── LICENSE                      MIT (code)
 └── README.md
 ```
+
+## Baseline detectors
+
+Nine detectors are evaluated on the benchmark. Eight score the same rate-only pair-feature input; Isolation Forest instead scores mean-element residuals of the target alone, which is what makes it the single-satellite control.
+
+| Detector | Family | Fitted on | Module |
+|----------|--------|-----------|--------|
+| Isolation Forest (single-sat) | classical | train split | `eval/iforest.py` |
+| Range-rate swing | physics heuristic | — | `eval/physics_baselines.py` |
+| CW template matching | physics model | — | `eval/physics_baselines.py` |
+| DTW 1-NN | elastic distance | train split | `eval/physics_baselines.py` |
+| One-class SVM (pair feats) | classical | train split | `eval/physics_baselines.py` |
+| LSTM-AD | neural | train split | `eval/lstm_ad.py` |
+| TranAD | neural | train split | `eval/tran_ad.py` |
+| Vanilla AnomalyTransformer | neural | train split | `eval/anomaly_transformer.py` |
+| PairWatch | neural | train split | `eval/pairwatch.py` |
+
+The range-rate, template, DTW, and one-class detectors are deterministic and need no seed averaging. Every fitted detector sees only the train split, which contains negatives alone; Isolation Forest is fitted with a fixed seed, and the neural detectors are run over five seeds with their per-window scores averaged.
 
 ## Run & Reproduce
 
@@ -127,8 +145,16 @@ Our processed benchmark contains only derived kinematic features and anonymized 
 
 ## Citation
 
-```
-[ANONYMOUS for double-blind review. Will be added upon acceptance.]
+```bibtex
+@inproceedings{kwon2026pairwatch,
+  author    = {Kwon, Young Eun and Yoon, Ji Won},
+  title     = {PairWatch: Pair-Aware Anomaly Transformer for Detecting Adversarial Rendezvous in Public Satellite Catalogs},
+  booktitle = {Proceedings of the 35th ACM International Conference on Information and Knowledge Management (CIKM '26)},
+  year      = {2026},
+  publisher = {ACM},
+  address   = {New York, NY, USA},
+  doi       = {10.1145/3799682.3839977}
+}
 ```
 
 ## License
