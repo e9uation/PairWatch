@@ -1,8 +1,13 @@
 # PairWatch
 
+[![arXiv](https://img.shields.io/badge/arXiv-2610.39679-b31b1b.svg)](https://arxiv.org/abs/2610.39679)
+[![DOI](https://img.shields.io/badge/DOI-10.1145%2F3799682.3839977-blue.svg)](https://doi.org/10.1145/3799682.3839977)
+[![Code License](https://img.shields.io/badge/code-MIT-green.svg)](LICENSE)
+[![Data License](https://img.shields.io/badge/data-CC--BY--4.0-orange.svg)](benchmark/DATA_LICENSE)
+
 Pair-aware anomaly detection for adversarial rendezvous and proximity operations (RPO) on public TLE catalogs.
 
-This repository accompanies the CIKM 2026 short paper *"PairWatch: Pair-Aware Anomaly Transformer for Detecting Adversarial Rendezvous in Public Satellite Catalogs"*.
+This repository accompanies the CIKM 2026 short paper [*"PairWatch: Pair-Aware Anomaly Transformer for Detecting Adversarial Rendezvous in Public Satellite Catalogs"*](https://arxiv.org/abs/2610.39679) ([ACM DL](https://doi.org/10.1145/3799682.3839977)).
 
 It contains the open benchmark of 359 pair-windows, the PairWatch implementation, all nine baseline detectors, four reproduction scripts, and the data collection pipeline.
 
@@ -147,13 +152,16 @@ Our processed benchmark contains only derived kinematic features and anonymized 
 
 ```bibtex
 @inproceedings{kwon2026pairwatch,
-  author    = {Kwon, Young Eun and Yoon, Ji Won},
-  title     = {PairWatch: Pair-Aware Anomaly Transformer for Detecting Adversarial Rendezvous in Public Satellite Catalogs},
-  booktitle = {Proceedings of the 35th ACM International Conference on Information and Knowledge Management (CIKM '26)},
-  year      = {2026},
-  publisher = {ACM},
-  address   = {New York, NY, USA},
-  doi       = {10.1145/3799682.3839977}
+  author        = {Kwon, Young Eun and Yoon, Ji Won},
+  title         = {PairWatch: Pair-Aware Anomaly Transformer for Detecting Adversarial Rendezvous in Public Satellite Catalogs},
+  booktitle     = {Proceedings of the 35th ACM International Conference on Information and Knowledge Management (CIKM '26)},
+  year          = {2026},
+  publisher     = {ACM},
+  address       = {New York, NY, USA},
+  doi           = {10.1145/3799682.3839977},
+  eprint        = {2610.39679},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CR}
 }
 ```
 
